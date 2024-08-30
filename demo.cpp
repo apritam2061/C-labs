@@ -1,21 +1,41 @@
 #include<iostream>
 using namespace std;
- 
- template<class T1,class T2, class D3>
+ template<class t, class d>
+ class rectangle
+ {
 
-void calculate_size(T1 a,T2 b,D3 c)
-{
-    cout<<"size of a="<<sizeof(a)<<"bytes"<<endl;
-    cout<<"size of b="<<sizeof(b)<<"bytes"<<endl;
-    cout<<"size of c="<<sizeof(c)<<"bytes"<<endl;
+    t length;
+    d breadth;
+    public:
+    rectangle ()
+    {
+        length =0;
+        breadth =0;
 
-}
+    }
+    rectangle(t l,d b)
+    {
+    length=l;
+    breadth=b;
+    }
+    void show_data()
+    {
+        cout<<length<<"+"<<breadth;
+    }
+    
+ };
 
-int main()
-{
- 
- calculate_size(3,4.5,'e');
- return 0;
+ int main()
+ {
+    rectangle <int,float>ri(3,5.2);
+    rectangle <float,int>rf(3.4,4);
+    ri.show_data();
+    rf.show_data();
+    
+  
+    return 0;
 
 
-}
+
+
+ }
